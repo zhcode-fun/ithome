@@ -59,7 +59,6 @@ class _NewsContentState extends State<NewsContent> {
   final int newsid;
   final StreamController sc;
   final _request = Request();
-  String _postDateTime = '';
   String _source = '';
   String _author = '';
   String _content = '';
@@ -98,7 +97,6 @@ class _NewsContentState extends State<NewsContent> {
             _source = data['newssource'];
             _author = data['newsauthor'];
             _content = data['detail'];
-            _postDateTime = '2019-10-10 12:20';
           });
         } else {
           Util.simpleToast('接口数据异常');
@@ -136,7 +134,7 @@ class _NewsContentState extends State<NewsContent> {
             Container(
               margin: EdgeInsets.only(top: 14, bottom: 16),
               child: Text(
-                _author.length > 0 ? '$_postDateTime  $_source($_author)' : '',
+                _author.length > 0 ? '$_source($_author)' : '',
                 style: TextStyle(
                   color: state.activedTheme.theme['fontColor'],
                 ),
