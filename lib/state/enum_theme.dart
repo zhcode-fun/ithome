@@ -1,0 +1,1 @@
+enum ActivedThemeIndex { LIGHT, NIGHT }
